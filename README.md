@@ -1,6 +1,6 @@
 # myWebAngular
 
-### Desarrollo del curso ["Angular de cero a experto creando aplicaciones"](https://gist.github.com/PurpleBooth/b24679402957c63ec426) en la plataforma Udemy.com
+### Desarrollo del curso ["Angular de cero a experto creando aplicaciones"](https://www.udemy.com/angular-2-fernando-herrera/?couponCode=ANGULAR-10) en la plataforma Udemy.com
 
 ## Temas aprendidos o en desarrollo
 
@@ -26,4 +26,4 @@
 - Gráficas Dinámicas en Angular 4+
 
 
-Link del curso completo [aquí](https://gist.github.com/PurpleBooth/b24679402957c63ec426)
+Link del curso completo [aquí](https://www.udemy.com/angular-2-fernando-herrera/?couponCode=ANGULAR-10)
