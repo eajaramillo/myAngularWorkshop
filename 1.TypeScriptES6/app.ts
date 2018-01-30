@@ -1,26 +1,58 @@
 /***************************************************************************/
+// test 11: interfaces de typescript
+interface Xmen{
+  nombre:string,
+  poder:string
+}
+
+// function enviarMision(xmen:any){
+// function enviarMision(xmen:{nombre:string}){
+function enviarMision(xmen:Xmen){
+  console.log("Enviando a: "+xmen.nombre);
+}
+
+
+// function enviarCuartel(xmen:{nombre:string}){
+function enviarCuartel(xmen:Xmen){
+  console.log("Enviando al cuartel: "+xmen.nombre);
+}
+
+let wolverine:Xmen = {
+  nombre: "Wolverine",
+  poder: "Regeneración"
+};
+
+// let wolverine:Xmen = {
+//   nombreXmen: "Wolverine",
+//   poder: "Regeneración"
+// }; // no cumple con la interfaz porque nombreXmen no esta en la interfaz
+
+enviarMision(wolverine);
+enviarCuartel(wolverine);
+
+/***************************************************************************/
 // test 10: promesas, para ejecutar procesos asíncronos y que
 // ejecutar cuando algo sale bien o sale mal con resolve() y reject.
-let prom1 = new Promise( function(resolve, reject){
-  setTimeout( ()=>{
-    console.log("Promesa terminada");
-    //SI termina bien
-    // resolve();
-
-    // Si termina normal
-    reject();
-  } , 1500)
-});
-
-console.log("Paso 1");
-
-prom1.then( function(){
-  console.log("Ejecutarme cuando termine bien!");
-}, function(){
-  console.error("Ejecutar si todo sale mal");
-})
-
-console.log("Paso 2");
+// let prom1 = new Promise( function(resolve, reject){
+//   setTimeout( ()=>{
+//     console.log("Promesa terminada");
+//     //SI termina bien
+//     // resolve();
+//
+//     // Si termina normal
+//     reject();
+//   } , 1500)
+// });
+//
+// console.log("Paso 1");
+//
+// prom1.then( function(){
+//   console.log("Ejecutarme cuando termine bien!");
+// }, function(){
+//   console.error("Ejecutar si todo sale mal");
+// })
+//
+// console.log("Paso 2");
 
 /***************************************************************************/
 // test 9: Destructuración de objetos y arreglos
@@ -29,7 +61,7 @@ console.log("Paso 2");
 //   nombre: "Steve",
 //   clave: "Capitan America",
 //   poder: "Droga"
-// }
+// };
 //
 // // let nombre = avenger.nombre;
 // // let clave = avenger.clave;
@@ -209,6 +241,6 @@ console.log("Paso 2");
 //
 // var wolverine = {
 //   nombre: "Logan"
-// }
+// };
 //
 // saludar(wolverine.nombre.toUpperCase());
