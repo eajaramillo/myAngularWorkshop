@@ -30,4 +30,8 @@ export class AppComponent {
   });
 
   fecha = new Date();
+
+  video = "zCTS9VIgc_I?rel=0";
+
+  activar_cifrado:boolean = true;
 }
