@@ -1,0 +1,76 @@
+<div class="container top30">
+  <div class="row">
+    <div class="col-md-3">
+      <img [src]="artista.images | sinfoto" class="img-thumbnail img-circular">
+    </div>
+
+    <div class="col-md-9">
+      <h1>{{artista.name}}</h1>
+      <hr>
+      <a [href]="artista.external_urls?.spotify" target="_blank" class="btn btn-outline-success">Abrir Spotify</a>
+      <button [routerLink]="['/search']" type="button" class="btn btn-outline-danger">Regresar</button>
+    </div>
+  </div>
+
+
+  <div class="row top30">
+    <div class="col-md-12">
+      <table class="table table-dark">
+        <thead>
+          <th>#</th>
+          <th>Foto</th>
+          <th>Nombre</th>
+          <th>Popularidad</th>
+          <th>Escuchar</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let toptrack of topTracks;let i = index">
+            <td>{{i+1}}</td>
+            <td>
+              <img [src]="toptrack.album.images | sinfoto" class="img-50">
+            </td>
+            <td>{{toptrack.name}}</td>
+            <td>{{toptrack.popularity}} %</td>
+            <td>
+              <audio controls >
+                <source [src]="toptrack.preview_url">
+                Su navegador no soporta esta opción
+              </audio>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Primer intento, en terminos generales resultó mejor de lo esperado -->
+<!-- <div class="row">
+  <div class="col-md-3">
+    <img [src]="artista.images | sinfoto">
+  </div>
+
+  <div class="col-md-9">
+    <h4>{{artista.name}}</h4>
+    <br>
+    <button type="button" class="btn btn-outline-primary">Regresar</button>
+    <button type="button" class="btn btn-outline-primary">SpotiApp</button>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <div class="row" *ngFor="let toptrack of topTracks">
+    <div class="col-md-1">
+      <img [src]="toptrack.album['images'] | sinfoto:2">
+    </div>
+
+    <div class="col-md-3">
+      {{toptrack.name}}
+    </div>
+  </div>
+</div> -->

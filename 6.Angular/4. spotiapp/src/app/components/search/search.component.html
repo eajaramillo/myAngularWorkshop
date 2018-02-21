@@ -15,7 +15,8 @@
 
       <div class="row">
         <div   class="col-md-3 text-center puntero"
-              *ngFor="let artista of _spotify.artistas">
+              *ngFor="let artista of _spotify.artistas"
+              [routerLink]="['/artist',artista.id]">
           <!-- <img [src]="artista.images[1]?.url"  -->
           <!-- Usar un pipe personalizado para validar si existe un arreglo de imagenes
                 si no es así entonces retornar una url de imagen por defecto -->

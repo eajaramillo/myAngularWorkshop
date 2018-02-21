@@ -23,8 +23,8 @@ export class SearchComponent {
       // Loading!!
       this._spotify.getArtistas(this.termino).
           subscribe(artistas=>{
-            console.log("Información lista");
-            console.log(artistas);
+            // console.log("Información lista");
+            // console.log(artistas);
 
             //Quitar el loading
           });
