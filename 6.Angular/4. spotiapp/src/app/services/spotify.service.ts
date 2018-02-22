@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 export class SpotifyService {
   artistas:any[] = [];
   urlSpotify:string='https://api.spotify.com/v1/';
-  token:string = 'BQAzHqMaDFJ8LrSE7rz-pkPJYtkXJXQkoq9pRa7_EK6Lc4knd3tuo7J7qDpI3Of3RifgMcgNhqNsqbRosrA';
+  token:string = 'BQDeTrsZAA54p1T-iPA2eGq1uzf5_DPR0jgmdw6bZBfpXOqoYUY8-kdCOhOso8DWxHkzEEzUnwV78HSkjn8';
 
   constructor(public http:HttpClient) {
     console.log("Servicio de spotify listo");

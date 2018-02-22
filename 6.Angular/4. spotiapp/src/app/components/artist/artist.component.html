@@ -32,10 +32,11 @@
             <td>{{toptrack.name}}</td>
             <td>{{toptrack.popularity}} %</td>
             <td>
-              <audio controls >
-                <source [src]="toptrack.preview_url">
-                Su navegador no soporta esta opción
-              </audio>
+                <audio controls >
+                  <source [src]="toptrack.preview_url">
+                  Su navegador no soporta esta opción
+                </audio>
+                <iframe [src]="toptrack.uri | domseguro:'https://open.spotify.com/embed?uri='" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
             </td>
           </tr>
         </tbody>
