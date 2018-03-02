@@ -1,3 +1,8 @@
-p {
+/* los css definidos aquí no modifican los estilos de los
+templates, para que se modifique en ellos se debería definir en
+el styles.css global, pero si lo que se quiere es
+manejar de forma independiente el estilo en los templates entonces
+en el mismo template se modifica el estilo */
+/* p {
   color:blue !important;
-}
+} */
